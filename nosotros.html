@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Crazy Digital | Microsoft Partner Gold</title>
+    <meta name="description" content="Conoce a Crazy Digital, Microsoft Partner Gold especializado en transformación digital empresarial">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Background layers -->
+    <div class="neural-network" id="neuralNetwork" aria-hidden="true"></div>
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav" aria-label="Principal">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html" aria-label="Ir al inicio">
+            <img src="images/logosinfondo.png" alt="Crazy Digital" class="logo-img">
+            </a>
+        </div>
+        <div class="nav-menu-glass">
+            <a href="index.html" class="nav-btn" data-color="blue">
+                <span class="btn-text">Inicio</span>
+                <div class="btn-glow"></div>
+            </a>
+            <a href="servicios.html" class="nav-btn" data-color="yellow">
+                <span class="btn-text">Servicios</span>
+                <div class="btn-glow"></div>
+            </a>
+            <a href="nosotros.html" class="nav-btn active" data-color="green">
+                <span class="btn-text">Nosotros</span>
+                <div class="btn-glow"></div>
+            </a>
+            <a href="contacto.html" class="nav-btn" data-color="red">
+                <span class="btn-text">Contacto</span>
+                <div class="btn-glow"></div>
+            </a>
+        </div>
+        <div class="nav-social">
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="hero-background">
+                <div class="grid-pattern"></div>
+                <div class="floating-elements"></div>
+            </div>
+            
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">
+                        <span class="title-line">SOBRE</span>
+                        <span class="title-line gradient-text">NOSOTROS</span>
+                    </h1>
+                    <p class="page-description">
+                        Somos especialistas en transformación digital con Microsoft, 
+                        comprometidos con acelerar el crecimiento empresarial.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">NUESTRA MISIÓN</h2>
+                        <p class="about-description">
+                            Transformamos pequeñas empresas en organizaciones digitalmente avanzadas 
+                            mediante la implementación estratégica del ecosistema Microsoft más 
+                            innovador del mercado.
+                        </p>
+                        <p class="about-description">
+                            Nuestro enfoque se centra en acelerar el crecimiento empresarial a través 
+                            de soluciones tecnológicas que automatizan procesos, optimizan recursos 
+                            y potencian la productividad.
+                        </p>
+                    </div>
+                    
+                    <div class="stats-showcase">
+                        <div class="stat-card" data-tilt>
+                            <div class="stat-number"></div>
+                            <div class="stat-label">Empresas que Confían en Nosotros</div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="stat-card" data-tilt>
+                            <div class="stat-number"></div>
+                            <div class="stat-label">Como trabajamos</div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="stat-card" data-tilt>
+                            <div class="stat-number"></div>
+                            <div class="stat-label">Experiencia</div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">CERTIFICACIONES MICROSOFT</h2>
+                    <p class="section-description">
+                        Respaldados por las certificaciones más prestigiosas del ecosistema Microsoft
+                    </p>
+                </div>
+                
+                <div class="cert-grid">
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                            </svg>
+                        </div>
+                        <h3 class="cert-title">MICROSOFT PARTNER</h3>
+                        <p class="cert-level">Certified</p>
+                        <p class="cert-description">
+                            Máximo nivel de certificación Microsoft con expertise 
+                            comprobado en todo el ecosistema.
+                        </p>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                            </svg>
+                        </div>
+                        <h3 class="cert-title">POWER PLATFORM</h3>
+                        <p class="cert-level">Expert Level</p>
+                        <p class="cert-description">
+                            Especialistas certificados en desarrollo low-code 
+                            y automatización de procesos.
+                        </p>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="cert-card-3d" data-tilt>
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="cert-title">AZURE SOLUTIONS</h3>
+                        <p class="cert-level">Architect</p>
+                        <p class="cert-description">
+                            Arquitectos certificados en soluciones de nube 
+                            empresarial y migración Azure.
+                        </p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="values">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">NUESTROS VALORES</h2>
+    </div>
+                
+    <div class="values-grid">
+      
+      <div class="value-card" data-tilt>
+        <div class="value-icon gold-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3 class="value-title">INNOVACIÓN</h3>
+        <p class="value-description">
+          Implementamos las tecnologías más avanzadas para mantener 
+          a nuestros clientes a la vanguardia.
+        </p>
+        <div class="card-glow"></div>
+      </div>
+      
+      <div class="value-card" data-tilt>
+        <div class="value-icon gold-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="value-title">CONFIANZA</h3>
+        <p class="value-description">
+          Construimos relaciones duraderas basadas en transparencia 
+          y resultados comprobables.
+        </p>
+        <div class="card-glow"></div>
+      </div>
+      
+      <div class="value-card" data-tilt>
+        <div class="value-icon gold-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="10,8 16,12 10,16"/>
+          </svg>
+        </div>
+        <h3 class="value-title">EXCELENCIA</h3>
+        <p class="value-description">
+          Nos comprometemos con la calidad superior en cada proyecto 
+          y servicio que entregamos.
+        </p>
+        <div class="card-glow"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+        <!-- ===== CTA SECTION ===== -->
+<section class="cta-premium scroll-section scale-in" id="cta">
+  <div class="container">
+    <div class="cta-premium-grid">
+
+      <!-- Columna Izquierda: Mensaje Principal -->
+      <div class="cta-premium-content">
+        <h2 class="cta-premium-title">¿QUIERES CONOCER MÁS?</h2>
+        <p class="cta-premium-description">
+          Conversemos sobre cómo podemos acelerar el crecimiento de tu empresa
+        </p>
+      </div>
+
+      <!-- Columna Derecha: Acciones y Prueba Social -->
+      <div class="cta-premium-actions">
+        <div class="action-buttons">
+
+          <!-- Botón primario con StarBorder -->
+          <span class="star-border" data-variant="mix" data-speed="6s" data-thick="2">
+            <a href="contacto.html" class="sb-inner btn btn-primary btn-large">
+              <span>VER SERVICIOS</span>
+              <div class="btn-glow"></div>
+            </a>
+            <div class="sb-grad-bottom"></div>
+            <div class="sb-grad-top"></div>
+          </span>
+
+          <!-- Botón secundario con StarBorder -->
+          <span class="star-border" data-variant="blue" data-speed="8s" data-thick="2">
+            <a href="servicios.html" class="sb-inner btn btn-secondary btn-large">
+              <span>CONTACTAR AHORA</span>
+            </a>
+            <div class="sb-grad-bottom"></div>
+            <div class="sb-grad-top"></div>
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== FIN DE CTA SECTION ===== -->
+    </main>
+
+    <!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <!-- Columna 1: Marca y Descripción -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="images/logo_sin_fondo.png" alt="Crazy Digital Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Crazy Digital</span>
+                </a>
+                <p class="footer-description">
+                    Aceleramos el crecimiento de tu negocio con soluciones cloud a medida. 
+                    Somos miembros del Microsoft AI Cloud Partner Program.
+                </p>
+            </div>
+
+            <!-- Columna 2: Servicios -->
+            <div class="footer-links">
+                <h4 class="footer-title">Soluciones</h4>
+                <ul class="footer-list">
+                    <li><a href="servicios.html#dynamics">Dynamics 365</a></li>
+                    <li><a href="servicios.html#powerplatform">Power Platform</a></li>
+                    <li><a href="servicios.html#azure">Azure Cloud</a></li>
+                    <li><a href="servicios.html#m365">Microsoft 365 & Copilot</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Empresa -->
+            <div class="footer-links">
+                <h4 class="footer-title">Empresa</h4>
+                <ul class="footer-list">
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Casos de Éxito</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Legal -->
+            <div class="footer-links">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-list">
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Parte inferior del Footer: Copyright y Redes Sociales -->
+        <div class="footer-bottom">
+            <p class="copyright-text">&copy; 2025 Crazy Digital. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-btn" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ===== FIN DE FOOTER SECTION ===== -->
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</body>
+</html>
+

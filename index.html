@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Digital - Transformación Digital Microsoft</title>
+    <meta name="description" content="Aceleramos el crecimiento empresarial con Microsoft Dynamics 365, Power Platform y Azure Cloud">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ===== LOADER FINAL: "AURORA EXPLOSION" ===== -->
+<div class="loader" id="loader" aria-hidden="true">
+    <!-- Efecto de explosión de pantalla completa (nuevo) -->
+    <div class="loader-flash"></div>
+
+    <div class="loader-content">
+        <!-- Contenedor para la animación del logo -->
+        <div class="logo-container">
+            <div class="loader-ring"></div>
+            <div class="logo-image">
+                <img src="images/logosinfondo.png" alt="Crazy Digital" class="logo-img">
+            </div>
+        </div>
+        
+        <!-- Contenedor de progreso -->
+        <div class="progress-container" role="status" aria-live="polite">
+            <div class="progress-text-wrapper">
+                <div class="progress-text">Inicializando ecosistema...</div>
+                <div class="progress-percentage">0%</div>
+            </div>
+            <!-- Barra de carga tipo "Matriz de Datos" -->
+            <div class="progress-bar">
+                <!-- Los bloques se generarán con JavaScript -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Background layers -->
+    <div class="neural-network" id="neuralNetwork" aria-hidden="true"></div>
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav" aria-label="Principal">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Ir al inicio">
+                    <img src="images/logosinfondo.png" alt="Crazy Digital" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-menu-glass">
+                <a href="index.html" class="nav-btn active" data-color="blue">
+                    <span class="btn-text">Inicio</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="servicios.html" class="nav-btn" data-color="yellow">
+                    <span class="btn-text">Servicios</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="nosotros.html" class="nav-btn" data-color="green">
+                    <span class="btn-text">Nosotros</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="contacto.html" class="nav-btn" data-color="red">
+                    <span class="btn-text">Contacto</span>
+                    <div class="btn-glow"></div>
+                </a>
+            </div>
+            <div class="nav-social">
+                <a href="#" class="social-btn" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+              </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+       <!-- ===== HERO SECTION (ESTRUCTURA CORREGIDA) ===== -->
+<section class="hero scroll-section fade-up" id="hero">
+    <!-- Fondos y efectos visuales -->
+    <div class="hero-background">
+        <div class="grid-pattern"></div>
+        <div class="floating-elements"></div>
+        <div class="particles-container" id="particles"></div>
+    </div>
+
+    <!-- Contenedor principal que organiza las dos columnas (Grid) -->
+    <div class="hero-container">
+        
+        <!-- COLUMNA 1: Contenido de texto (izquierda) -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Transformamos</span>
+                <span class="title-line gradient-text">Empresas con</span>
+                <span class="title-line">MICROSOFT</span>
+            </h1>
+
+            <p class="hero-description">
+                Aceleramos el crecimiento de pequeñas empresas mediante la implementación 
+                estratégica del ecosistema Microsoft más avanzado del mercado.
+            </p>
+
+            <div class="hero-actions">
+
+  <!-- Botón primario con StarBorder -->
+  <span class="star-border" data-variant="mix" data-speed="6s" data-thick="2">
+    <a href="servicios.html" class="sb-inner btn btn-primary">
+      <span>Explorar Servicios</span>
+      <div class="btn-glow"></div>
+    </a>
+    <div class="sb-grad-bottom"></div>
+    <div class="sb-grad-top"></div>
+  </span>
+
+  <!-- Botón secundario con StarBorder -->
+  <span class="star-border" data-variant="blue" data-speed="8s" data-thick="2">
+    <a href="contacto.html" class="sb-inner btn btn-secondary">
+      <span>Iniciar Proyecto</span>
+    </a>
+    <div class="sb-grad-bottom"></div>
+    <div class="sb-grad-top"></div>
+  </span>
+
+</div>
+        </div>
+
+        <!-- COLUMNA 2: Tarjetas interactivas (derecha) -->
+        <div class="cd-hero-right">
+            <div id="cdCardSwap" class="cd-card-swap" aria-label="Tarjetas Microsoft" role="region">
+                
+               <article class="cd-card cd-ms dynamics" tabindex="0">
+        <div class="cd-card-inner">
+            <img class="cd-logo" src="images/logo-Dynamics365.png" alt="Dynamics 365">
+
+            <span class="cd-badge">Dynamics 365</span>
+            <h3 class="cd-title">Organiza y haz crecer tu negocio</h3>
+            <p class="cd-desc">Unifica ventas, clientes y finanzas en una sola plataforma con IA.</p>
+            <ul class="cd-list">
+            <li>Sigue clientes y oportunidades sin Excel</li>
+            <li>Atiende en email, WhatsApp y web desde un único lugar</li>
+            <li>Controla ingresos, gastos e inventario fácilmente</li>
+            <li>Informes automáticos para decidir mejor</li>
+            </ul>
+            <a class="cd-cta" href="servicios.html#dynamics">Ver Dynamics</a>
+        </div>
+        </article>
+
+
+<!-- Tarjeta 2: Microsoft 365 -->
+<article class="cd-card cd-ms M365" tabindex="0">
+              <div class="cd-card-inner">
+                <img class="cd-logo" src="images/office-2.png" alt="Microsoft 365" loading="lazy" decoding="async">
+                <span class="cd-badge">Microsoft 365</span>
+                <h3 class="cd-title">Productividad en la nube</h3>
+                <p class="cd-desc">Correo, documentos y seguridad, siempre disponibles.</p>
+                <ul class="cd-list">
+                  <li>Exchange, OneDrive, SharePoint</li>
+                  <li>Seguridad y cumplimiento</li>
+                  <li>Acceso desde cualquier lugar</li>
+                </ul>
+                <a class="cd-cta" href="servicios.html#m365">Ver Microsoft 365</a>
+              </div>
+            </article>
+
+
+
+<!-- Tarjeta 3: Power Platform -->
+<article class="cd-card cd-ms green" style="--accent: var(--ms-green);" tabindex="0">
+  <div class="cd-card-inner">
+    <div class="cd-header">
+      <img class="cd-logo" src="images/servicio-power-platform.png" alt="Power Platform" width="40" height="40" loading="lazy" decoding="async">
+      <span class="cd-badge">Power Platform</span>
+    </div>
+
+    <div class="cd-orb" aria-hidden="true"></div>
+
+    <h3 class="cd-title">Soluciones a tu medida</h3>
+    <p class="cd-desc">Crea apps y automatiza tareas sin ser programador.</p>
+
+    <ul class="cd-list">
+      <li>Apps internas en días, no meses</li>
+      <li>Automatiza procesos y recordatorios</li>
+      <li>Dashboards con tus KPIs (Power BI)</li>
+      <li>Conecta con Excel, SharePoint y Dynamics</li>
+    </ul>
+
+    <a class="cd-cta" href="servicios.html#powerplatform">Explorar Power</a>
+  </div>
+</article>
+
+
+
+
+<!-- Tarjeta 4: Teams -->
+        <article class="cd-card cd-ms teams" tabindex="0">
+              <div class="cd-card-inner">
+                <img class="cd-logo" src="images/logo-teams.png" alt="Microsoft Teams" loading="lazy" decoding="async">
+                <span class="cd-badge">Teams</span>
+                <h3 class="cd-title">Colaboración sin fricción</h3>
+                <p class="cd-desc">Reúne chat, llamadas y documentos en un solo lugar.</p>
+                <ul class="cd-list">
+                  <li>Reuniones HD y grabaciones</li>
+                  <li>Canales por equipo/proyecto</li>
+                  <li>Coautoría con Microsoft 365</li>
+                </ul>
+                <a class="cd-cta" href="servicios.html#teams">Descubrir Teams</a>
+              </div>
+            </article>
+
+
+        <!-- Power BI -->
+        <article class="cd-card cd-ms powerbi" tabindex="0">
+              <div class="cd-card-inner">
+                <img class="cd-logo" src="images/logo-PowerBI.png" alt="Power BI" loading="lazy" decoding="async">
+                <span class="cd-badge">Power BI</span>
+                <h3 class="cd-title">Tus números, claros</h3>
+                <p class="cd-desc">Conecta tus datos y entiende tu negocio en minutos.</p>
+                <ul class="cd-list">
+                  <li>Dashboards en tiempo real</li>
+                  <li>Informes automatizados</li>
+                  <li>Comparte insights seguros</li>
+                </ul>
+                <a class="cd-cta" href="servicios.html#powerbi">Ver Power BI</a>
+              </div>
+            </article>
+
+            <!-- 2. Copilot & IA -->
+            <article class="cd-card cd-ms m365" tabindex="0">
+              <div class="cd-card-inner">
+                <img class="cd-logo" src="images/logo-CopilotStudio.png" alt="Copilot" loading="lazy" decoding="async">
+                <span class="cd-badge">Copilot & IA</span>
+                <h3 class="cd-title">Tu asistente en el trabajo</h3>
+                <p class="cd-desc">Escribe, resume y automatiza en tus apps de siempre.</p>
+                <ul class="cd-list">
+                  <li>Word, Excel, Outlook y Teams</li>
+                  <li>Automatización por lenguaje natural</li>
+                  <li>Insights y recomendaciones</li>
+                </ul>
+                <a class="cd-cta" href="servicios.html#ecosistema">Explorar Copilot</a>
+              </div>
+            </article>
+
+
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- ===== FIN DE LA HERO SECTION ===== -->
+
+<!-- CINTA DE LOGOS (compacta) -->
+    <!-- CINTA DE LOGOS (compacta y única) -->
+<section class="partners partners--compact" id="partners" aria-label="Tecnologías y partners">
+  <div class="container">
+    
+    <div id="logoLoop"
+         class="logoloop logoloop--fade logoloop--scale-hover"
+         style="--logoloop-logoHeight: 28px; --logoloop-gap: 32px; --logoloop-fadeColor: #ffffff00;">
+      <div class="logoloop__track">
+        <ul class="logoloop__list" id="logoLoopSeq" aria-hidden="false">
+          <li class="logoloop__item"><img src="images/logo-Dynamics365.png" alt="Dynamics 365"></li>
+          <li class="logoloop__item"><img src="images/logo-PowerBI.png" alt="Power BI"></li>
+          <li class="logoloop__item"><img src="images/logo-Teams.png" alt="Microsoft Teams"></li>
+          <li class="logoloop__item"><img src="images/office-2.png" alt="Microsoft 365"></li>
+          <li class="logoloop__item"><img src="images/logo-SharePoint.png" alt="SharePoint"></li>
+          <li class="logoloop__item"><img src="images/logo-VisualStudio.png" alt="Visual Studio"></li>
+          <li class="logoloop__item"><img src="images/logo-PowerApps.png" alt="Power Apps"></li>
+          <li class="logoloop__item"><img src="images/power-automate.png" alt="Power Automate"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+
+        <!-- ===== FEATURES SECTION (¿POR QUÉ CRAZY DIGITAL?) - VERSIÓN EXTENDIDA DE 6 TARJETAS ===== -->
+<section class="features scroll-section fade-left delay-200" id="features">
+    <div class="container">
+        <!-- Encabezado de la sección -->
+        <div class="section-header">
+            <h2 class="section-title">¿POR QUÉ CRAZY DIGITAL?</h2>
+            <p class="section-description">
+                Tu transformación digital merece un partner que entienda tus metas. Esto es lo que nos hace diferentes.
+            </p>
+        </div>
+        
+        <!-- Grid para las 6 tarjetas de características -->
+        <div class="features-grid">
+
+            <!-- Tarjeta 1: Partner Certificado -->
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <!-- Icono de Medalla/Certificación -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                </div>
+                <h3 class="feature-title">EXPERIENCIA CERTIFICADA</h3>
+                <p class="feature-description">
+                    Como Microsoft Network Member, te garantizamos implementaciones robustas y seguras, siguiendo las mejores prácticas del ecosistema Dynamics 365, Power Platform y Azure.
+                </p>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Tarjeta 2: Implementación Ágil y Guiada -->
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <!-- Icono de Rayo/Velocidad -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">IMPLEMENTACIÓN ÁGIL</h3>
+                <p class="feature-description">
+                    Lanzamos tu solución en semanas, no meses. Nuestra metodología se enfoca en un MVP funcional desde el inicio para que veas resultados y valor de inmediato.
+                </p>
+                <div class="card-glow"></div>
+            </div>
+            
+            <!-- Tarjeta 3: Integración Total -->
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <!-- Icono de Conexión/Nodos -->
+                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">INTEGRACIÓN 360º</h3>
+                <p class="feature-description">
+                    Conectamos todas tus herramientas (ERP, CRM, eCommerce, correo) en una única plataforma. Elimina silos de datos, automatiza flujos y obtén una visión unificada de tu negocio.
+                </p>
+                <div class="card-glow"></div>
+            </div>
+
+            <!-- Tarjeta 4: Datos y Business Intelligence -->
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <!-- Icono de Gráfica/Análisis -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M18.7 8a2.3 2.3 0 0 0-3.4 0L12 11.4l-2.3-2.3a2.3 2.3 0 0 0-3.4 0L3 12.6"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">DATOS & POWER BI</h3>
+                <p class="feature-description">
+                    Transformamos tus datos en decisiones. Creamos paneles visuales en tiempo real para que midas KPIs, identifiques tendencias y tengas el control total de tus operaciones.
+                </p>
+                <div class="card-glow"></div>
+            </div>
+
+            <!-- Tarjeta 5: IA y Copilot -->
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <!-- Icono de IA/Robot -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 8V4H8"></path><rect x="4" y="12" width="16" height="8" rx="2"></rect><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M12 12v-2"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">IA & COPILOT</h3>
+                <p class="feature-description">
+                    Llevamos la inteligencia artificial a tu equipo. Integramos Copilot para automatizar tareas, generar insights y potenciar la productividad en las herramientas que ya utilizan.
+                </p>
+                <div class="card-glow"></div>
+            </div>
+
+            <!-- Tarjeta 6: Soporte Continuo -->
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <!-- Icono de Escudo/Soporte -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">SOPORTE EVOLUTIVO</h3>
+                <p class="feature-description">
+                    Tu proyecto no termina con la puesta en marcha. Te acompañamos con soporte 24/7, formación y mejoras continuas para que tu plataforma evolucione contigo.
+                </p>
+                <div class="card-glow"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ===== FIN DE FEATURES SECTION ===== -->
+
+
+        
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-premium scroll-section scale-in" id="cta">
+  <div class="container">
+    <div class="cta-premium-grid">
+
+      <!-- Columna Izquierda: Mensaje Principal -->
+      <div class="cta-premium-content">
+        <h2 class="cta-premium-title">Hagamos que funcione.</h2>
+        <p class="cta-premium-description">
+          Cada negocio es único. Hablemos de tus retos y diseñemos juntos una solución tecnológica a la medida de tus objetivos.
+        </p>
+      </div>
+
+      <!-- Columna Derecha: Acciones y Prueba Social -->
+      <div class="cta-premium-actions">
+        <div class="action-buttons">
+
+          <!-- Botón primario con StarBorder -->
+          <span class="star-border" data-variant="mix" data-speed="6s" data-thick="2">
+            <a href="contacto.html" class="sb-inner btn btn-primary btn-large">
+              <span>Agendar Consultoría</span>
+              <div class="btn-glow"></div>
+            </a>
+            <div class="sb-grad-bottom"></div>
+            <div class="sb-grad-top"></div>
+          </span>
+
+          <!-- Botón secundario con StarBorder -->
+          <span class="star-border" data-variant="blue" data-speed="8s" data-thick="2">
+            <a href="servicios.html" class="sb-inner btn btn-secondary btn-large">
+              <span>Explorar Servicios</span>
+            </a>
+            <div class="sb-grad-bottom"></div>
+            <div class="sb-grad-top"></div>
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== FIN DE CTA SECTION ===== -->
+
+    </main>
+
+    <!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+
+            <!-- Columna 1: Marca y Descripción -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="images/logo_sin_fondo.png" alt="Crazy Digital Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Crazy Digital</span>
+                </a>
+                <p class="footer-description">
+                    Aceleramos el crecimiento de tu negocio con soluciones cloud a medida. 
+                    Somos miembros del Microsoft AI Cloud Partner Program.
+                </p>
+            </div>
+
+            <!-- Columna 2: Servicios -->
+            <div class="footer-links">
+                <h4 class="footer-title">Soluciones</h4>
+                <ul class="footer-list">
+                    <li><a href="servicios.html#dynamics">Dynamics 365</a></li>
+                    <li><a href="servicios.html#powerplatform">Power Platform</a></li>
+                    <li><a href="servicios.html#azure">Azure Cloud</a></li>
+                    <li><a href="servicios.html#m365">Microsoft 365 & Copilot</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Empresa -->
+            <div class="footer-links">
+                <h4 class="footer-title">Empresa</h4>
+                <ul class="footer-list">
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Casos de Éxito</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Legal -->
+            <div class="footer-links">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-list">
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Parte inferior del Footer: Copyright y Redes Sociales -->
+        <div class="footer-bottom">
+            <p class="copyright-text">&copy; 2025 Crazy Digital. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-btn" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ===== FIN DE FOOTER SECTION ===== -->
+
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</body>
+</html>
